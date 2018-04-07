@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>user signup</title>
+
+    <style>
+        .error {
+            color: red;
+        }
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Signup</h1>
+    <form method="POST">
+            Username <input type="text" id="username" name="username" value={{username}}>
+            <p class="error">{{username_err}}</p>
+            <br />
+
+            Password <input type="password" name="password">
+            <p class="error">{{password_err}}</p>
+            <br />
+
+            Confirm Password <input type="password" name="confirm_password">
+            <p class="error">{{confirm_password_err}}</p>
+            <br />
+
+            Email (Optional) <input type="text" name="email" value={{email}}>
+            <p class="error">{{email_err}}</p>
+            <br />
+
+            <input type="submit" value="submit">
+    </form>
+</body>
+</html>
